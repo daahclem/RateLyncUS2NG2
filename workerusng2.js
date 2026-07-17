@@ -729,6 +729,7 @@ async function runSource(browser, source) {
     else if (source.provider === "OaPay") payload = await handleOaPay(page, source);
     else if (source.provider === "Ohent Pay") payload = await handleOhentPay(page, source);
     else if (source.provider === "Paysend") payload = await handlePaysend(page, source);
+      else if (source.provider === "Pesa.co") payload = await handlePesaCo(page, source);
     else if (source.provider === "uLink") payload = await handleULink(page, source);
     else if (source.provider === "XE") payload = await handleXE(page, source);
     else throw new Error(`No handler configured for ${source.provider}`);
